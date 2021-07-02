@@ -46,8 +46,8 @@ dictionary_path = pkg_resources.resource_filename(
 sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1)
 
 
-# Set BERT to look for the 30 most likely words in position of the misspelled word
-unmasker = pipeline('fill-mask', model='bert-base-uncased', top_k=30)
+# Set CamemBERT to look for the 30 most likely words in position of the misspelled word
+unmasker = pipeline('fill-mask', model='camembert-base', top_k=30)
 
 
 class spellcheck:                       
